@@ -4,7 +4,7 @@ Status do Projeto: :heavy_check_mark: :warning: (concluido, em desenvolvimento, 
 
 <p>
   Este repositório, o readme e todos os arquivos que ele contém não serão atualizados, pois não estou mais usando meu hackintosh. Veja abaixo para qual versão do OpenCore o config.plist é aplicável e não o use com nenhuma outra versão.
-Uma breve descrição sobre como configurar o macOS no Lenovo Ideapad 330s-15ikb 81F5.
+Uma breve descrição sobre como configurar o macOS no Lenovo Ideapad 330s-15ikb 81DE/81FD/81F5.
 Para o melhor sucesso, siga o guia vanilla OpenCore criado por Dortania para configurar tudo: https://dortania.github.io/OpenCore-Install-Guide/
 
 Nenhum arquivo kext ou ACPI pré-construído será fornecido neste repositório. Por favor, use os links fornecidos para baixar cada arquivo.
@@ -40,13 +40,24 @@ IMPORTANTE: Use os arquivos fornecidos por sua conta e risco. Não sou responsá
 |Nome|Descrição|Versão|Status|
 | -------- |-------- |-------- |-------- |
 |opencore|suportado|0.7.7|:heavy_check_mark:|
-|Audio|AppleALC|1.6.8|:heavy_check_mark:|
-|Bluetooth|intelBluetoothFirmware|2.1.0|:heavy_check_mark:|
-|Wireless|itlwm|2.1.0|:heavy_check_mark:|
-|Ethernet|RealtekRTL8111|2.4.2|:heavy_check_mark:|
-|Touchpad|VoodooPS2Controller|2.2.8|:heavy_check_mark:|
+... 
+
+|Nome|Descrição|Curent Version|Fonte|Status|
+| -------- |-------- |-------- |-------- |-------- |
+|AppleALC|para entrada/saída de áudio nativo (usado com layoutid=14)|1.6.8|https://github.com/acidanthera/AppleALC|:heavy_check_mark:|
+|AirportBrcmFixup|para WIFI em cartões WIFI não nativos|0.7.7|https://github.com/acidanthera/AirportBrcmFixup|:heavy_check_mark:|
+|intelBluetoothFirmware|carregando firmware Bluetooth|2.1.0|https://github.com/acidanthera/BrcmPatchRAM|:heavy_check_mark:|
+|BrightnessKeys|fazer F11 e F12 funcionarem como teclas de brilho|2.1.0|https://github.com/acidanthera/BrightnessKeys|:heavy_check_mark:|
+|Lilu|basicamente necessário para quase todos os outros kexts funcionarem|2.4.2|https://github.com/acidanthera/Lilu|:heavy_check_mark:|
+|VirtaulSMC + SMCProcessor + SMCBatteryManager|Virtualização SMC e leitura de sensores|2.2.8|https://github.com/acidanthera/VirtualSMC|:heavy_check_mark:|
+|USBMap|mapeando as portas USB|...|https://github.com/corpnewt/USBMap|:heavy_check_mark:|
+|VoodooI2C + VoodooI2CHID|trackpad|2.2.8|https://github.com/VoodooI2C/VoodooI2C|:heavy_check_mark:|
+|VoodooPS2Controller|teclado (remova VoodooInput e VoodooPS2Trackpad da pasta Plugins)|...|https://github.com/acidanthera/VoodooPS2|:heavy_check_mark:|
+|WhateverGreen |trackpad|...|https://github.com/acidanthera/WhateverGreen|:heavy_check_mark:|
+|YogaSMC |ornece recursos adicionais para laptops Lenovo, como ThinkPad, Ideapad e Yoga (WIP)|...|https://github.com/zhen-zen/YogaSMC|:heavy_check_mark:|
 ... 
 - Wifi, Bluetooth, Airdrop, SideCar, Sleep, Wake, aceleração iGPU etc. tudo funcionando
+- se você quiser usar o seletor de BOT do OC, você precisa alterar o seguinte no config.plist: Misc> Boot> PickerMode: false
 
 <h3 aling="left">CONFIGURAR NA BIOS </h3>
 
@@ -59,7 +70,12 @@ IMPORTANTE: Use os arquivos fornecidos por sua conta e risco. Não sou responsá
 - - todo o resto pode ser deixado como padrão
 
 ...
-<h3 aling="left"> Notas </h3>
+
+<h3 aling="left">CONFIGURAR NO config.plist </h3>
+- não se esqueça de configurar a seção Platforminfo/Generic/, isso é exclusivo para cada Hackintosh, pois contém SerialNumber, MLB, ROM. Use este guia
+- para esta configuração é usado o SMBIOS do MacBookPro14,3 com i3-7020U/i5-8250U , pois é o mais próximo que podemos combinar com o i3-7020U/i5-8250U do Ideapad
+- de acordo com o guia Dortania, um MacBookPro14,X é melhor, sinta-se à vontade para tentar usar esses SMBIOS e ver se obtém melhores resultados. Mais informações sobre como escolher o SMBIOS certo visite => http://dortania.github.io/
+<h3 aling="left"> Fontes </h3>
 
 - [opencore dortania](http://dortania.github.io/)
 
