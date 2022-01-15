@@ -72,9 +72,23 @@ IMPORTANTE: Use os arquivos fornecidos por sua conta e risco. Não sou responsá
 ...
 
 <h3 aling="left">CONFIGURAR NO config.plist </h3>
+
 - não se esqueça de configurar a seção Platforminfo/Generic/, isso é exclusivo para cada Hackintosh, pois contém SerialNumber, MLB, ROM. Use este guia
 - para esta configuração é usado o SMBIOS do MacBookPro14,3 com i3-7020U/i5-8250U , pois é o mais próximo que podemos combinar com o i3-7020U/i5-8250U do Ideapad
-- de acordo com o guia Dortania, um MacBookPro14,X é melhor, sinta-se à vontade para tentar usar esses SMBIOS e ver se obtém melhores resultados. Mais informações sobre como escolher o SMBIOS certo visite => http://dortania.github.io/
+- de acordo com o guia Dortania, um MacBookPro14,X é melhor, sinta-se à vontade para tentar usar esses SMBIOS e ver se obtém melhores resultados. [Mais informações sobre como escolher o SMBIOS certo.](http://dortania.github.io/)
+- SMBIOS DE EXEMPLO:
+- - (gerem seu proprio SMBIOS.
+
+-   #######################################################
+-  #               MacBookPro14,1 SMBIOS Info            #
+- #######################################################
+
+- Type:         MacBookPro14,1
+- Serial:       XXXXXXXXXXXX
+- Board Serial: XXXXXXXXXXXXXXXXX
+- SmUUID:       XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+...
 <h3 aling="left"> Fontes </h3>
 
 - [opencore dortania](http://dortania.github.io/)
