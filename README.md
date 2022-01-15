@@ -74,6 +74,11 @@ Para o melhor sucesso, siga o guia vanilla OpenCore criado por Dortania para con
 
 <h3 aling="left">CONFIGURAR NO config.plist </h3>
 
+<h5>Programas para editção</5>
+
+- [ProperTree](https://github.com/corpnewt/ProperTree)
+- [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+
 - não se esqueça de configurar a seção Platforminfo/Generic/, isso é exclusivo para cada Hackintosh, pois contém SerialNumber, MLB, ROM. [Use este guia ](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo)
 - para esta configuração é usado o SMBIOS do MacBookPro14,3 com i3-7020U/i5-8250U , pois é o mais próximo que podemos combinar com o i3-7020U/i5-8250U do Ideapad
 - de acordo com o guia Dortania, um MacBookPro14,X é melhor, sinta-se à vontade para tentar usar esses SMBIOS e ver se obtém melhores resultados. [Mais informações sobre como escolher o SMBIOS certo.](http://dortania.github.io/)
